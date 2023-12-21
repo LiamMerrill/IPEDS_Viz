@@ -4,13 +4,15 @@ import plotly.express as px
 
 # Load data function
 @st.cache
-def load_data():
-    data = pd.read_csv('/Volumes/G-DRIVE mobile USB/2xDecoded Subset/TenYears/Merging Surveys/df6.csv')
-    return data
 
+def load_data():
+    # Replace 'raw.githubusercontent.com' with 'raw.githubusercontent.com/<username>/<repository>/<branch>'
+    data_url = 'https://github.com/LiamMerrill/IPEDS_Viz/blob/master/df6.csv'
+    data = pd.read_csv(data_url)
+    return data
 def main():
-    st.title('Data Exploration App')
-    st.write('Select X, Y, and Displayed Variable for Scatter Plot or View Data on a Map.')
+    st.title('Exploring IPEDS Data')
+    st.write('This is an app that allows for the exploration of select IPEDS data. There are two views, one is a scatter plot and one is a map. For the scatter plot, select continuous variables for X, Y, and then select something like Institution as Displayed Variable to plot. For map.')
 
     # Load the data
     data = load_data()
