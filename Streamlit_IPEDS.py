@@ -68,7 +68,7 @@ def main():
         selected_values = st.sidebar.multiselect('Select Values:', data[filter_variable].unique())
 
        # Create a sidebar for selecting the view mode
-view_mode = st.sidebar.radio('Select View Mode:', ('Plot', 'Map'))
+view_mode = st.sidebar.radio('Select View Mode:', ('Plot', 'Map'), key='view_mode_radio')
 
 if view_mode == 'Plot':
     # Create a sidebar for selecting X, Y, and Displayed Variable
