@@ -73,11 +73,11 @@ view_mode = st.sidebar.radio('Select View Mode:', ('Plot', 'Map'), key='view_mod
 if view_mode == 'Plot':
     # Create a sidebar for selecting X, Y, and Displayed Variable
     st.sidebar.subheader('Select X and Y Variables')
-    x_axis = st.sidebar.selectbox('X-axis:', data.columns, index=data.columns.get_loc('Retention Rate'))
-    y_axis = st.sidebar.selectbox('Y-axis:', data.columns, index=data.columns.get_loc('Total digital/electronic circulations (books and media)'))
+    x_axis = st.sidebar.selectbox('X-axis:', data.columns, index=data.columns.get_loc('Retention Rate'), key='x_axis_selectbox')
+    y_axis = st.sidebar.selectbox('Y-axis:', data.columns, index=data.columns.get_loc('Total digital/electronic circulations (books and media)'), key='y_axis_selectbox')
 
     st.sidebar.subheader('Select Displayed Variable')
-    displayed_variable = st.sidebar.selectbox('Displayed Variable:', data.columns, index=data.columns.get_loc('Institution'))
+    displayed_variable = st.sidebar.selectbox('Displayed Variable:', data.columns, index=data.columns.get_loc('Institution'), key='displayed_variable_selectbox')
 
     # Create a sidebar for selecting color variable
     st.sidebar.subheader('Select Color Variable')
