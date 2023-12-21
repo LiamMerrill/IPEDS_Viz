@@ -36,7 +36,7 @@ def main():
 
         # Create a sidebar for selecting the year filter
         st.sidebar.subheader('Select Year Filter')
-        year_filter = st.sidebar.selectbox('Select Year:', sorted(data['Year'].unique(), reverse=True))
+        year_filter = st.sidebar.selectbox('Select Year:', sorted(data['Year'].unique(), reverse=True), key='year_filter_selectbox')
 
         # Filter data based on the selected year
         filtered_data = data[data['Year'] == year_filter]
