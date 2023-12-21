@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 
 # Load data function
-@st.cache_data
+@st.cache
 
 def load_data():
     # Replace 'raw.githubusercontent.com' with 'raw.githubusercontent.com/<username>/<repository>/<branch>'
