@@ -7,7 +7,7 @@ import plotly.express as px
 
 def load_data():
     # Replace 'raw.githubusercontent.com' with 'raw.githubusercontent.com/<username>/<repository>/<branch>'
-    data_url = 'https://github.com/LiamMerrill/IPEDS_Viz/blob/master/df6.csv'
+    data_url = 'https://raw.githubusercontent.com/LiamMerrill/IPEDS_Viz/master/df6.csv'
     data = pd.read_csv(data_url)
     return data
 data = load_data()
