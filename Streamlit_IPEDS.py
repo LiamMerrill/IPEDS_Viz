@@ -32,7 +32,7 @@ def main():
 
         # Create a sidebar for selecting color variable
         st.sidebar.subheader('Select Color Variable')
-        color_variable = st.sidebar.selectbox('Color Variable:', data.columns, index=data.columns.get_loc('Carnegie Classification 2010: Basic'))
+        color_variable = st.sidebar.selectbox('Color Variable:', data.columns, index=data.columns.get_loc('Carnegie Classification 2010: Basic'), key='color_variable_selectbox')
 
         # Create a sidebar for selecting the year filter
         st.sidebar.subheader('Select Year Filter')
