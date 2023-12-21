@@ -10,6 +10,7 @@ def load_data():
     data_url = 'https://github.com/LiamMerrill/IPEDS_Viz/blob/master/df6.csv'
     data = pd.read_csv(data_url)
     return data
+data = load_data()
 def main():
     st.title('Exploring IPEDS Data')
     st.write('This is an app that allows for the exploration of select IPEDS data. There are two views, one is a scatter plot and one is a map. For the scatter plot, select continuous variables for X, Y, and then select something like Institution as Displayed Variable to plot. For map.')
